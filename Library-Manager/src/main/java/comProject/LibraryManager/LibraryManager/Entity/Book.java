@@ -31,7 +31,7 @@ public class Book {
 //    private IssuedBook issuedBook;
 
     @OneToMany(cascade = CascadeType.ALL)
-    @JoinColumn(name = "book_id_join")
+    @JoinColumn(name = "book_id_copy")
     private List<IssuedBook> issuedBook= new ArrayList<>();
 
     public int getId() {

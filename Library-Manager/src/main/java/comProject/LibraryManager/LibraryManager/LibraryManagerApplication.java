@@ -56,6 +56,14 @@ public class LibraryManagerApplication implements CommandLineRunner {
 //		b5.setIssuedBook(is5);
 //		b6.setIssuedBook(is6);
 
+		is1.setBook(b1);
+//		is2.setBook(b2);
+//		is3.setBook(b3);
+//		is4.setBook(b4);
+//		is5.setBook(b5);
+//		is6.setBook(b6);
+
+
 		// for onetomany mapping
 
 		b1.getIssuedBook().add(is1);
@@ -65,12 +73,12 @@ public class LibraryManagerApplication implements CommandLineRunner {
 		b5.getIssuedBook().add(is5);
 		b6.getIssuedBook().add(is6);
 
-//		is1.setBook(b1);
-//		is2.setBook(b2);
-//		is3.setBook(b3);
-//		is4.setBook(b4);
-//		is5.setBook(b5);
-//		is6.setBook(b6);
+		is1.setBook(b1);
+		is2.setBook(b1);
+		is3.setBook(b3);
+		is4.setBook(b4);
+		is5.setBook(b4);
+		is6.setBook(b6);
 
 
 		books.add(b1);

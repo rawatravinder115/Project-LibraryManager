@@ -17,7 +17,7 @@ public  class IssuedBook{
 
     private String status;
 
-    @OneToOne(cascade = CascadeType.ALL,mappedBy = "issuedBook")
+    @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "book_id_copy")
     private Book book;
 
