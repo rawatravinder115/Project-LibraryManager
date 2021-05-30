@@ -56,7 +56,7 @@ public class LibraryManagerApplication implements CommandLineRunner {
 //		b5.setIssuedBook(is5);
 //		b6.setIssuedBook(is6);
 
-		// for onetomany mapping 
+		// for onetomany mapping
 
 		b1.getIssuedBook().add(is1);
 		b2.getIssuedBook().add(is2);
