@@ -10,7 +10,7 @@ public class Book {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int bookid;
+    private int id;
 
     @Column(name="title")
     private String title;
@@ -30,16 +30,16 @@ public class Book {
 //    )
 //    private IssuedBook issuedBook;
 
-    @OneToMany(cascade = CascadeType.ALL)
-    @JoinColumn(name = "book_id_copy")
+    @OneToMany(cascade = CascadeType.ALL,mappedBy = "Book")
+    @JoinColumn(name = "Book")
     private List<IssuedBook> issuedBook= new ArrayList<>();
 
     public int getId() {
-        return bookid;
+        return id;
     }
 
     public void setId(int bookid) {
-        this.bookid = bookid;
+        this.id = bookid;
     }
 
     public String getTitle() {
@@ -69,7 +69,7 @@ public class Book {
 
 
     public Book(int bookid, String title, String author, String subject) {
-        this.bookid = bookid;
+        this.id = bookid;
         this.title = title;
         this.author = author;
         this.subject = subject;

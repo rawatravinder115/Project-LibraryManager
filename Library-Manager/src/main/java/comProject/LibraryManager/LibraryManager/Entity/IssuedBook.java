@@ -7,7 +7,7 @@ import javax.persistence.*;
 public  class IssuedBook{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int issueid;
+    private int id;
 
 //    @Column(name = "user_id")
 //    private int userId;
@@ -23,11 +23,11 @@ public  class IssuedBook{
 
 
     public int getId() {
-        return issueid;
+        return id;
     }
 
     public void setId(int issueid) {
-        this.issueid = issueid;
+        this.id = issueid;
     }
 
 //    public int getUserId() {
