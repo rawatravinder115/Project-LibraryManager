@@ -23,8 +23,11 @@ public  class IssuedBook{
 ////    @JoinColumn(name = "Book_id_2")
 //    private List<Book> book= new ArrayList<>();
 
-    @ManyToOne
-    @JoinColumn(name = "fk_book")
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinTable(name = "user_book",
+                joinColumns = {@JoinColumn(name = "isb")},
+                inverseJoinColumns = {@JoinColumn(name = "user")}
+    )
     private User user;
 
 

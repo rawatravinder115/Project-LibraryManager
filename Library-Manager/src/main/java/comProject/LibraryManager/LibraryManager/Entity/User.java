@@ -15,7 +15,8 @@ public class User {
     private  String dept;
     private  int year;
 
-    @OneToMany(mappedBy = "user",cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "user",cascade = CascadeType.ALL,fetch = FetchType.LAZY)
+//    @JoinColumn(name = "issued_fk")
     private List<IssuedBook> isb= new ArrayList<>();
 
     public String getName() {
