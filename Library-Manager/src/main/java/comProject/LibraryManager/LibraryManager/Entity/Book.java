@@ -30,9 +30,10 @@ public class Book {
 //    )
 //    private IssuedBook issuedBook;
 
-    @OneToMany(cascade = CascadeType.ALL,mappedBy = "Book")
-    @JoinColumn(name = "Book")
-    private List<IssuedBook> issuedBook= new ArrayList<>();
+//    @ManyToOne
+//    @JoinTable(name = "fk_Book")
+////    private List<IssuedBook> issuedBook= new ArrayList<>();
+//    private IssuedBook issuedBook;
 
     public int getId() {
         return id;
@@ -89,7 +90,6 @@ public class Book {
     public Book() {
     }
 
-    // for onetoone mapping
 //    public IssuedBook getIssuedBook() {
 //        return issuedBook;
 //    }
@@ -99,11 +99,12 @@ public class Book {
 //    }
 
 
-    public List<IssuedBook> getIssuedBook() {
-        return issuedBook;
-    }
+//    public List<IssuedBook> getIssuedBook() {
+//        return issuedBook;
+//    }
+//
+//    public void setIssuedBook(List<IssuedBook> issuedBook) {
+//        this.issuedBook = issuedBook;
+//    }
 
-    public void setIssuedBook(List<IssuedBook> issuedBook) {
-        this.issuedBook = issuedBook;
-    }
 }

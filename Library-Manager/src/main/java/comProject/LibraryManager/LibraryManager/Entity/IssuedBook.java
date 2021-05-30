@@ -1,6 +1,8 @@
 package comProject.LibraryManager.LibraryManager.Entity;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "issued_book")
@@ -17,9 +19,13 @@ public  class IssuedBook{
 
     private String status;
 
-    @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "Book_id_2")
-    private Book book;
+//    @OneToMany(cascade = CascadeType.ALL,mappedBy = "issuedBook")
+////    @JoinColumn(name = "Book_id_2")
+//    private List<Book> book= new ArrayList<>();
+
+    @ManyToOne
+    @JoinColumn(name = "fk_book")
+    private User user;
 
 
     public int getId() {
@@ -76,11 +82,29 @@ public  class IssuedBook{
 //        this.book =book;
 //    }
 
-    public Book getBook() {
-        return book;
+//    public Book getBook() {
+//        return book;
+//    }
+//
+//    public void setBook(Book book) {
+//        this.book = book;
+//    }
+
+
+//    public List<Book> getBook() {
+//        return book;
+//    }
+//
+//    public void setBook(List<Book> book) {
+//        this.book = book;
+//    }
+
+
+    public User getUser() {
+        return user;
     }
 
-    public void setBook(Book book) {
-        this.book = book;
+    public void setUser(User user) {
+        this.user = user;
     }
 }
